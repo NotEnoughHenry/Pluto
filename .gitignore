@@ -1,0 +1,6 @@
+.vs/
+node_modules/
+google-sheets-node/
+token.json
+keys.json
+credentials.json
