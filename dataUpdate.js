@@ -85,7 +85,7 @@ module.exports = {
                 }
             }
             if (canAdd) {
-                console.log("ADDING " + playerList[i][1]);
+                // console.log("ADDING " + playerList[i][1]); // Use if necessary
                 count++;
                 try {
                     leagueData = {...leagueData, 
@@ -102,7 +102,7 @@ module.exports = {
                     }};
                 } catch {
                     count--;
-                    console.log(`${playerList[i]} Errored Out`);
+                    // console.log(`${playerList[i]} Errored Out`); // Use if necessary
                     failedUsers.push(playerList[i]);
                 }
             // } else {
