@@ -124,7 +124,7 @@ client.on('message', (msg) =>{
             }
         }
 
-        if (command == "help") { // Repurpose
+        if (command == "help") { // Repurpose -- UPDATE!!!
             const commandList = new Discord.MessageEmbed()
                 .setTitle("Command List")
                 .setThumbnail("https://pbs.twimg.com/profile_images/1189742100113502209/5U791_Mc_400x400.jpg")

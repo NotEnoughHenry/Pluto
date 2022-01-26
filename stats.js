@@ -196,7 +196,7 @@ module.exports = {
         } 
 
         var teamImage;
-        switch (teamName) {
+        switch (teamName) { // ADD THREE's IMAGES
             case "California Bears":
                 teamImage = "https://cdn.discordapp.com/attachments/927578169043714168/933143125772341320/CABearsTransparent.png";
                 break;
