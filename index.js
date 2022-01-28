@@ -90,49 +90,52 @@ client.on('message', (msg) =>{
         if (msg.author.id != '238853321522282496') return; // REMOVE THIS IN IMPLEMTATION INTO DISCORDS
         console.log(`\n${msg.author.username} ran command: ${command}\nArg(s): ${args}`);
 
-        if (command == "stats") {
+        if (command.toLowerCase() == "stats") {
             stats.playerStats(msg, args, [urlTwosDiscord, urlThreesDiscord, nbp]);
         }
 
-        if (command == "top") {
+        if (command.toLowerCase() == "top") {
             // Top teams/players
         }
 
-        if (command == "teamInfo") {
+        if (command.toLowerCase() == "teams") {
+            // list all franchises discord links
+        }
+
+        if (command.toLowerCase() == "teaminfo") {
             stats.teamInfo(option, args, msg)
         }
 
         if (msg.author.id == '238853321522282496') { // Make another section for staff
-            if (command == "test") {
+            if (command.toLowerCase() == "test") {
                 // test();
             }
 
-            if (command == "mass") {
+            if (command.toLowerCase() == "mass") {
                 dataUpdate.massAdd(args[0]);
             }
 
-            if (command == "mmr") {
+            if (command.toLowerCase() == "mmr") {
                 dataUpdate.updateMMRs(args[0]);
             }
 
-            if (command == "setTeams") {
+            if (command.toLowerCase() == "setteams") {
                 stats.setTeams(option);
             }
 
-            if (command == "add") { // make sure that only admissions can do this
+            if (command.toLowerCase() == "add") { // make sure that only admissions can do this
                 dataUpdate.addPlayer(msg, args[0].substring(3, args[0].length - 1), option);
             }
         }
 
-        if (command == "help") { // Repurpose -- UPDATE!!!
+        if (command.toLowerCase() == "help") { // Repurpose -- UPDATE!!!
             const commandList = new Discord.MessageEmbed()
                 .setTitle("Command List")
                 .setThumbnail("https://pbs.twimg.com/profile_images/1189742100113502209/5U791_Mc_400x400.jpg")
                 .addFields(
-                    { name: 'p.top + [LEAGUE]', value: "`Shows who's on the top of all stats!`\n`EX: p.top ML`", inline: false},
-                    { name: 'p.team + [TEAM]', value: "`Provides teams listed roster & salary.`", inline: false},
                     { name: 'p.stats + [MLE Username]', value: "`Shows all the players stats!`\n`\"EX: p.stats\" OR \"p.stats @NotHenry#4271\"`", inline: false},
-                    { name: 'p.connect', value: "`Allows you to use m.stats me`\n`EX: m.connect`", inline: false}
+                    { name: 'p.top + [DIVISION]', value: "`Shows who's on the top of all stats!`\n`EX: p.top Contender`", inline: false},
+                    { name: 'p.team + [TEAM]', value: "`Provides teams listed roster & salary.`", inline: false}
                 )
                 .setFooter(randomFooter())
                 .setTimestamp();
