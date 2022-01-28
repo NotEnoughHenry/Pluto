@@ -720,6 +720,7 @@
 		},
 		"Texas Rodeo": {
 			"GM": "Aligator808",
+			"AGM": "Anti",
 			"Legends": {
 				"playerA": {
 					"discordID": null
@@ -779,7 +780,7 @@
 		},
 		"Georgia Outlaws": {
 			"GM": "Mist | ISlay-GG",
-			"AGM": "GalaxyDemon",
+			"AGM": "Maximusaurs",
 			"Legends": {
 				"playerA": {
 					"discordID": null
@@ -839,6 +840,7 @@
 		},
 		"St. Louis Hydras": {
 			"GM": "Fahhr",
+			"AGM": "flow",
 			"Legends": {
 				"playerA": {
 					"discordID": null
