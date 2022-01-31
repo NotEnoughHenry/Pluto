@@ -43,6 +43,8 @@ client.on('ready', () => {
             try {
                 dataUpdate.massAdd(2);
                 await sleep(60000);
+                dataUpdate.sortData(2);
+                await sleep(10000);
             } catch { 
                 console.log("massAdd 2's FAILED");
             }
@@ -55,6 +57,8 @@ client.on('ready', () => {
             try {
                 dataUpdate.massAdd(3);
                 await sleep(60000);
+                dataUpdate.sortData(3);
+                await sleep(10000);
             } catch { 
                 console.log("massAdd 3's FAILED");
             }
@@ -66,6 +70,7 @@ client.on('ready', () => {
             }
             try {
                 stats.setTeams(2);
+                await sleep(300000);
             } catch {
                 console.log("SetTeams 2's FAILED");
             }
@@ -108,7 +113,7 @@ client.on('message', (msg) =>{
 
         if (msg.author.id == '238853321522282496') { // Make another section for staff
             if (command.toLowerCase() == "test") {
-                // test();
+                dataUpdate.sortData(2);
             }
 
             if (command.toLowerCase() == "mass") {

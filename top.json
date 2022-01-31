@@ -1,0 +1,258 @@
+{
+    "Twos": {
+        "Players": {
+            "Goals": {
+                "1": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                }, 
+                "2": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                }, 
+                "3": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                } 
+            },
+            "Assists": {
+                "1": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                }, 
+                "2": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                }, 
+                "3": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                } 
+            },
+            "Saves": {
+                "1": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                }, 
+                "2": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                }, 
+                "3": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                } 
+            },"Shots": {
+                "1": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                }, 
+                "2": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                }, 
+                "3": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                } 
+            }
+        },
+        "Teams": {
+            "Goals": {
+                "1": {
+                    "Teamname": "",
+                    "stat": 0
+                }, 
+                "2": {
+                    "Teamname": "",
+                    "stat": 0
+                }, 
+                "3": {
+                    "Teamname": "",
+                    "stat": 0
+                } 
+            },
+            "Assists": {
+                "1": {
+                    "Teamname": "",
+                    "stat": 0
+                }, 
+                "2": {
+                    "Teamname": "",
+                    "stat": 0
+                }, 
+                "3": {
+                    "Teamname": "",
+                    "stat": 0
+                } 
+            },
+            "Saves": {
+                "1": {
+                    "Teamname": "",
+                    "stat": 0
+                }, 
+                "2": {
+                    "Teamname": "",
+                    "stat": 0
+                }, 
+                "3": {
+                    "Teamname": "",
+                    "stat": 0
+                }
+            },"Shots": {
+                "1": {
+                    "Teamname": "",
+                    "stat": 0
+                }, 
+                "2": {
+                    "Teamname": "",
+                    "stat": 0
+                }, 
+                "3": {
+                    "Teamname": "",
+                    "stat": 0
+                }
+            }
+        }
+    },
+    "Threes": {
+        "Players": {
+            "Goals": {
+                "1": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                }, 
+                "2": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                }, 
+                "3": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                } 
+            },
+            "Assists": {
+                "1": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                }, 
+                "2": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                }, 
+                "3": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                } 
+            },
+            "Saves": {
+                "1": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                }, 
+                "2": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                }, 
+                "3": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                } 
+            },"Shots": {
+                "1": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                }, 
+                "2": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                }, 
+                "3": {
+                    "DiscordID": "",
+                    "Username": "",
+                    "stat": 0
+                } 
+            }
+        },
+        "Teams": {
+            "Goals": {
+                "1": {
+                    "Teamname": "",
+                    "stat": 0
+                }, 
+                "2": {
+                    "Teamname": "",
+                    "stat": 0
+                }, 
+                "3": {
+                    "Teamname": "",
+                    "stat": 0
+                } 
+            },
+            "Assists": {
+                "1": {
+                    "Teamname": "",
+                    "stat": 0
+                }, 
+                "2": {
+                    "Teamname": "",
+                    "stat": 0
+                }, 
+                "3": {
+                    "Teamname": "",
+                    "stat": 0
+                } 
+            },
+            "Saves": {
+                "1": {
+                    "Teamname": "",
+                    "stat": 0
+                }, 
+                "2": {
+                    "Teamname": "",
+                    "stat": 0
+                }, 
+                "3": {
+                    "Teamname": "",
+                    "stat": 0
+                }
+            },"Shots": {
+                "1": {
+                    "Teamname": "",
+                    "stat": 0
+                }, 
+                "2": {
+                    "Teamname": "",
+                    "stat": 0
+                }, 
+                "3": {
+                    "Teamname": "",
+                    "stat": 0
+                }
+            }
+        }
+    }
+}

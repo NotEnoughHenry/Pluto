@@ -426,8 +426,8 @@ module.exports = {
             textBoxes[i] += "`";
             textboxA += textBoxes[i];
         }
-        var textboxB = "TEXT";
-        if (player.games != 0) {
+        var textboxB = "";
+        if (player.games != 0) { // MAKE THIS DUMBASS
 
         }
 
@@ -447,6 +447,10 @@ module.exports = {
             .setFooter(randomFooter())
             .setTimestamp();
         msg.channel.send(statsResponse);
+    },
+
+    topPlayers() {
+        
     }
 }
 

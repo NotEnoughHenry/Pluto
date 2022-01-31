@@ -231,8 +231,116 @@ module.exports = {
         // Give them roles now To Do
     },
 
-    async updatePlayerData() { // Everything but MMR
+    async updatePlayerData(option) { // Everything but MMR & trackerID
+        playerData = JSON.parse(fs.readFileSync('playerData.json')); // MUST RUN THIS EVERYTIME I TAKE DATA FROM THE playerData.json
+
+        var leagueData;
+        var opt;
+        if (option == 2) { // twos
+            leagueData = playerData.Twos;
+            opt = {
+                spreadsheetId: '1Hi_hJNBkzKdWDeKTIRH6CsczePQSNOa-i92IXTfdWhY',
+                ranges: `DIRECTORY!A2:J`,
+                auth: googleClient
+            };
+        } else { // option == 3 - threes
+            leagueData = playerData.Threes;
+            opt = {
+                spreadsheetId: '1hPMjETuTrwjDtWnwMz8MgGa0JtIMNC6orDzPG43RGE0',
+                ranges: `Sum Data!C2:I`,
+                auth: googleClient
+            };
+        }
+
+        var playerList = gsapi.spreadsheets.values.batchGet(opt);
+        playerList = playerList.data.valueRanges[0].values;
+        for (var i = 0; i < playerList.length; i++) {
+            if (playerList[i][0].length != 0) {
+                // binary search for them in the player list
+
+            }
+        }
+
+
+
+        var userData = {
+            Twos: null,
+            Threes: null
+        };
         
+        if (option == 2) { // twos
+            userData.Twos = leagueData;
+            userData.Threes = playerData.Threes;
+        } else { // option == 3 - threes
+            userData.Threes = leagueData;
+            userData.Twos = playerData.Twos;
+        }
+
+        fs.writeFile('./playerData.json', JSON.stringify(userData, null, '\t'), err => {
+            if(err) throw err;
+        });
+    },
+
+    sortData(option) {
+        playerData = JSON.parse(fs.readFileSync('playerData.json')); // MUST RUN THIS EVERYTIME I TAKE DATA FROM THE playerData.json
+
+        var leagueData;
+        if (option == 2) { // twos
+            leagueData = playerData.Twos;
+        } else { // option == 3 - threes
+            leagueData = playerData.Threes;
+        }
+
+        var sortedJson = {};
+        var smallestIndex = 0;
+        var unsortedArray = [];
+        for (var i = 0; i < Object.keys(leagueData).length; i++) {
+            unsortedArray.push(Object.keys(leagueData)[i]);
+        }
+        var smallest = unsortedArray[0];
+        for (var i = 0; i < Object.keys(leagueData).length; i++) {
+            if (i % 10 == 0) {
+                console.log(i);
+            }
+            smallest = unsortedArray[0];
+            smallestIndex = 0;
+            for (var j = 0; j < unsortedArray.length; j++) {
+                if (smallest > unsortedArray[j]) {
+                    smallest = unsortedArray[j];
+                    smallestIndex = j;
+                }
+            }
+            unsortedArray.splice(smallestIndex, 1);
+            
+            sortedJson = {...sortedJson, [smallest]: leagueData[smallest]};
+        }
+        console.log(Object.keys(sortedJson).length);
+        console.log(Object.keys(leagueData).length);
+
+        var userData = {
+            Twos: null,
+            Threes: null
+        };
+        
+        if (option == 2) { // twos
+            userData.Twos = sortedJson;
+            userData.Threes = playerData.Threes;
+        } else { // option == 3 - threes
+            userData.Threes = sortedJson;
+            userData.Twos = playerData.Twos;
+        }
+
+        fs.writeFile('./playerData.json', JSON.stringify(userData, null, '\t'), err => {
+            if(err) throw err;
+        });
+    },
+
+    setTopPlayers() {
+
+    },
+
+    setTopTeams() {
+
     },
     /* Salary Per Division
      * Contender 0-10
