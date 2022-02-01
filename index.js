@@ -74,6 +74,18 @@ client.on('ready', () => {
             } catch {
                 console.log("SetTeams 2's FAILED");
             }
+            // try {
+            //     dataUpdate.updatePlayerData(2);
+            //     await sleep(60000);
+            // } catch { 
+            //     console.log("updatePlayerData 2's FAILED");
+            // }
+            try {
+                dataUpdate.updatePlayerData(3);
+                await sleep(60000);
+            } catch { 
+                console.log("updatePlayerData 3's FAILED");
+            }
         }
     }, 3.6e+6);
 });
