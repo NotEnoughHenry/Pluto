@@ -262,7 +262,6 @@ module.exports = {
                     leagueData[playerList[i][0]].saves = playerList[i][4];
                     leagueData[playerList[i][0]].shots = playerList[i][5];
                     leagueData[playerList[i][0]].games = playerList[i][6];
-                    console.log(leagueData[playerList[i][0]]);
                 }
             } catch {}
         }
