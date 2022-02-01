@@ -439,14 +439,14 @@ async function findMMR(player, option) {
                     player.salary = Math.max(((Math.floor(((max2 + max3)*50)/50)*50)/100 + 0.5), player.salary);
                 }
             }
-
+            
             if (player.salary <= 10) {
                 player.division = "Contender";
             } else if (player.salary <= 12) {
                 player.division = "All-Star";
-            } else if (player.salary <= 14.5) {
+            } else if (player.salary <= 14.5 || option == 3) {
                 player.division = "Ultimate";
-            } else {
+            } else if (option == 2) {
                 player.division = "Legends";
             }
     return player;
