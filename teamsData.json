@@ -61,8 +61,8 @@
 			}
 		},
 		"London Cobras": {
-			"GM": "Kurbzi_",
-			"AGM": "Crimson",
+			"GM": "Doopaboy5000",
+			"AGM": "ProdiJoe",
 			"Legends": {
 				"playerA": {
 					"discordID": null
@@ -1199,5 +1199,705 @@
 			}
 		}
 	},
-	"Threes": {}
+	"Threes": {
+		"Alaska Yetis": {
+			"GM": "ThatOneDoosh",
+			"AGM": "Flow",
+			"Ultimate": {
+				"playerA": {
+					"username": "Jayero",
+					"discordID": "414461777758257173"
+				},
+				"playerB": {
+					"username": "Deluxe",
+					"discordID": "225387732422230016"
+				},
+				"playerC": {
+					"username": "TEMPEST ",
+					"discordID": null
+				},
+				"playerD": {
+					"discordID": null
+				}
+			},
+			"All-Star": {
+				"playerA": {
+					"username": "Mollyo2004",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "Fahhr",
+					"discordID": "534483747274489897"
+				},
+				"playerC": {
+					"username": "TosCrazy",
+					"discordID": null
+				},
+				"playerD": {
+					"username": "ThatOneDoosh",
+					"discordID": "204344435557793792"
+				}
+			},
+			"Contender": {
+				"Captain": "Benry",
+				"playerA": {
+					"username": "Zenko",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "AntoneHenry",
+					"discordID": null
+				},
+				"playerC": {
+					"username": "Benry",
+					"discordID": "526066475258347540"
+				},
+				"playerD": {
+					"username": "PrinceElijahGavin",
+					"discordID": null
+				}
+			}
+		},
+		"Arizona Scorpions": {
+			"GM": "Benpie24",
+			"AGM": "Squirrel",
+			"Ultimate": {
+				"playerA": {
+					"discordID": null
+				},
+				"playerB": {
+					"discordID": null
+				},
+				"playerC": {
+					"discordID": null
+				},
+				"playerD": {
+					"discordID": null
+				}
+			},
+			"All-Star": {
+				"Captain": "AndyPants",
+				"playerA": {
+					"username": "Tomisgone",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "AndyPants",
+					"discordID": null
+				},
+				"playerC": {
+					"username": "Butcher",
+					"discordID": null
+				},
+				"playerD": {
+					"username": "Avenge",
+					"discordID": "270255680064192522"
+				}
+			},
+			"Contender": {
+				"Captain": "benpie24",
+				"playerA": {
+					"username": "DevilJacob07",
+					"discordID": "555883041868873729"
+				},
+				"playerB": {
+					"username": "benpie24",
+					"discordID": "794358576726016001"
+				},
+				"playerC": {
+					"username": "ForRealForReal",
+					"discordID": null
+				},
+				"playerD": {
+					"username": "Cheg._.",
+					"discordID": null
+				}
+			}
+		},
+		"Carolina Pirates": {
+			"GM": "SquareOfPegasus",
+			"AGM": "Rinnie ",
+			"Ultimate": {
+				"Captain": "Reprise",
+				"playerA": {
+					"username": "1TapStephen",
+					"discordID": "147469868906708992"
+				},
+				"playerB": {
+					"discordID": null
+				},
+				"playerC": {
+					"username": "Reprise",
+					"discordID": "315792070092783617"
+				},
+				"playerD": {
+					"username": "RA1NBOW",
+					"discordID": null
+				}
+			},
+			"All-Star": {
+				"Captain": "SquareOfPegasus",
+				"playerA": {
+					"username": "Bomb",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "Rinnie",
+					"discordID": null
+				},
+				"playerC": {
+					"username": "Form",
+					"discordID": null
+				},
+				"playerD": {
+					"username": "SquareOfPegasus",
+					"discordID": null
+				}
+			},
+			"Contender": {
+				"playerA": {
+					"username": "Slavic",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "Flashy ",
+					"discordID": null
+				},
+				"playerC": {
+					"username": "Bushy",
+					"discordID": null
+				},
+				"playerD": {
+					"username": "Angel_",
+					"discordID": null
+				}
+			}
+		},
+		"Oregon Ninjas": {
+			"GM": "𝓑𝓾𝓷𝓷𝓲",
+			"AGM": "Flakes",
+			"Ultimate": {
+				"Captain": "Flakes",
+				"playerA": {
+					"username": "Flakes",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "Scion",
+					"discordID": "266719338466115585"
+				},
+				"playerC": {
+					"username": "Xertheus",
+					"discordID": null
+				},
+				"playerD": {
+					"username": "drag",
+					"discordID": null
+				}
+			},
+			"All-Star": {
+				"Captain": "UnSuNgHeRo",
+				"playerA": {
+					"username": "GurglingRL",
+					"discordID": "481999725219020803"
+				},
+				"playerB": {
+					"username": "MUSTY_SEACOW",
+					"discordID": null
+				},
+				"playerC": {
+					"username": "UnSuNgHeRo",
+					"discordID": "226544979902726144"
+				},
+				"playerD": {
+					"username": "Notbean",
+					"discordID": null
+				}
+			},
+			"Contender": {
+				"Captain": "ang.el",
+				"playerA": {
+					"username": "ang.el",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "Octane",
+					"discordID": null
+				},
+				"playerC": {
+					"discordID": null
+				},
+				"playerD": {
+					"username": "jbtheshrink",
+					"discordID": "898639242908024842"
+				}
+			}
+		},
+		"Hawaii Tikis": {
+			"GM": "BigMackDaddy",
+			"AGM": "Spirits Remain",
+			"Ultimate": {
+				"playerA": {
+					"username": "Xan",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "MopB",
+					"discordID": null
+				},
+				"playerC": {
+					"username": "Nue.",
+					"discordID": "256634943659048960"
+				},
+				"playerD": {
+					"username": "Conor",
+					"discordID": null
+				}
+			},
+			"All-Star": {
+				"playerA": {
+					"username": "SquishyJelly",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "Charload",
+					"discordID": "228672047859892226"
+				},
+				"playerC": {
+					"username": "ItsRecon",
+					"discordID": null
+				},
+				"playerD": {
+					"username": "DrHitshot",
+					"discordID": "443860037526487050"
+				}
+			},
+			"Contender": {
+				"Captain": "Spirits Undead",
+				"playerA": {
+					"username": "Spirits Undead",
+					"discordID": "514942472598585364"
+				},
+				"playerB": {
+					"username": "MB_Outcast",
+					"discordID": null
+				},
+				"playerC": {
+					"username": "Ritzbitz58",
+					"discordID": null
+				},
+				"playerD": {
+					"discordID": null
+				}
+			}
+		},
+		"Iceland Foxes": {
+			"GM": "HamichSamich",
+			"AGM": "YLO_ZClaps",
+			"Ultimate": {
+				"playerA": {
+					"discordID": null
+				},
+				"playerB": {
+					"discordID": null
+				},
+				"playerC": {
+					"discordID": null
+				},
+				"playerD": {
+					"discordID": null
+				}
+			},
+			"All-Star": {
+				"Captain": "CJgodzilla07",
+				"playerA": {
+					"username": "Jessee",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "CJgodzilla07",
+					"discordID": null
+				},
+				"playerC": {
+					"username": "HamichSamich",
+					"discordID": "426811525123145729"
+				},
+				"playerD": {
+					"username": "Crowd_Ctrl",
+					"discordID": "323314026740449293"
+				}
+			},
+			"Contender": {
+				"Captain": "Speed",
+				"playerA": {
+					"username": "Alfred",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "Speed",
+					"discordID": null
+				},
+				"playerC": {
+					"username": "YLO_ZClapz",
+					"discordID": null
+				},
+				"playerD": {
+					"discordID": null
+				}
+			}
+		},
+		"Los Angeles Astros": {
+			"GM": "Mr. Isaiah",
+			"AGM": "Crow",
+			"Ultimate": {
+				"playerA": {
+					"discordID": null
+				},
+				"playerB": {
+					"discordID": null
+				},
+				"playerC": {
+					"discordID": null
+				},
+				"playerD": {
+					"discordID": null
+				}
+			},
+			"All-Star": {
+				"Captain": "Crow",
+				"playerA": {
+					"username": "Crow",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "Bird",
+					"discordID": null
+				},
+				"playerC": {
+					"username": "Nexsel",
+					"discordID": "447889818014187531"
+				},
+				"playerD": {
+					"username": "Voltx",
+					"discordID": null
+				}
+			},
+			"Contender": {
+				"playerA": {
+					"username": "Mr.Isaiah",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "Mcnairrr",
+					"discordID": null
+				},
+				"playerC": {
+					"username": "dephin3d\r",
+					"discordID": null
+				},
+				"playerD": {
+					"discordID": null
+				}
+			}
+		},
+		"Michigan Blizzard": {
+			"GM": "RyAndGav",
+			"AGM": "Draxzs.",
+			"Ultimate": {
+				"Captain": "AmericanBanter",
+				"playerA": {
+					"username": "AmericanBanter",
+					"discordID": "283056490938499073"
+				},
+				"playerB": {
+					"username": "Lawzey",
+					"discordID": "292403406243495947"
+				},
+				"playerC": {
+					"username": "Krunch",
+					"discordID": null
+				},
+				"playerD": {
+					"username": "Gneuf",
+					"discordID": null
+				}
+			},
+			"All-Star": {
+				"Captain": "Draxz",
+				"playerA": {
+					"username": "Topia",
+					"discordID": "455014675789381644"
+				},
+				"playerB": {
+					"username": "Rowe",
+					"discordID": null
+				},
+				"playerC": {
+					"username": "Draxz",
+					"discordID": null
+				},
+				"playerD": {
+					"username": "Magz",
+					"discordID": null
+				}
+			},
+			"Contender": {
+				"Captain": "Wings",
+				"playerA": {
+					"username": "Wings",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "G0WLD.",
+					"discordID": null
+				},
+				"playerC": {
+					"username": "Rainer",
+					"discordID": null
+				},
+				"playerD": {
+					"username": "Myoku",
+					"discordID": null
+				}
+			}
+		},
+		"New York Liberty": {
+			"GM": "Aligator808",
+			"AGM": "Saiiku",
+			"Ultimate": {
+				"playerA": {
+					"discordID": null
+				},
+				"playerB": {
+					"discordID": null
+				},
+				"playerC": {
+					"discordID": null
+				},
+				"playerD": {
+					"discordID": null
+				}
+			},
+			"All-Star": {
+				"Captain": "Aligator808",
+				"playerA": {
+					"username": "Silencer",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "ProdiJoe",
+					"discordID": "331229252777279498"
+				},
+				"playerC": {
+					"username": "Aligator808",
+					"discordID": null
+				},
+				"playerD": {
+					"username": "Doopaboy5000",
+					"discordID": "451127270153650188"
+				}
+			},
+			"Contender": {
+				"Captain": "Saiiku",
+				"playerA": {
+					"username": "bluffyluffy",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "Shmyo14",
+					"discordID": "546496836836261899"
+				},
+				"playerC": {
+					"username": "GinToxic",
+					"discordID": null
+				},
+				"playerD": {
+					"username": "Not Anti",
+					"discordID": null
+				}
+			}
+		},
+		"Ohio Gorillas": {
+			"GM": "YungDaBum",
+			"AGM": "Killerbunny",
+			"Ultimate": {
+				"Captain": "Sly",
+				"playerA": {
+					"username": "Anormo",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "Sly",
+					"discordID": "360206960106274816"
+				},
+				"playerC": {
+					"username": "Seth",
+					"discordID": null
+				},
+				"playerD": {
+					"username": "Asque",
+					"discordID": "529823061193785354"
+				}
+			},
+			"All-Star": {
+				"Captain": "LaCapone",
+				"playerA": {
+					"username": "KB.",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "LaCapone",
+					"discordID": null
+				},
+				"playerC": {
+					"username": "Nicholas4677",
+					"discordID": null
+				},
+				"playerD": {
+					"username": "bry",
+					"discordID": null
+				}
+			},
+			"Contender": {
+				"Captain": "ZzKickinzZ",
+				"playerA": {
+					"username": "crazymonkeyU",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "tanner",
+					"discordID": null
+				},
+				"playerC": {
+					"username": "ZzKickinzZ",
+					"discordID": null
+				},
+				"playerD": {
+					"username": "EtherealDoom",
+					"discordID": null
+				}
+			}
+		},
+		"San Francisco Gold Miners": {
+			"GM": "Pete.",
+			"AGM": "Nolan",
+			"Ultimate": {
+				"Captain": "Doder",
+				"playerA": {
+					"username": "Doder",
+					"discordID": "240546099239190529"
+				},
+				"playerB": {
+					"username": "Kamikazi",
+					"discordID": "125695928576245760"
+				},
+				"playerC": {
+					"username": "twan",
+					"discordID": "602136103209926656"
+				},
+				"playerD": {
+					"username": "Sadpete",
+					"discordID": null
+				}
+			},
+			"All-Star": {
+				"Captain": "CeeJayyy",
+				"playerA": {
+					"username": "CeeJayyy",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "Garebear",
+					"discordID": "376161768831189002"
+				},
+				"playerC": {
+					"username": "MaleficientRL",
+					"discordID": null
+				},
+				"playerD": {
+					"username": "Nolan",
+					"discordID": null
+				}
+			},
+			"Contender": {
+				"Captain": "Coolman041",
+				"playerA": {
+					"username": "MasterINF",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "Rygiic",
+					"discordID": "541494039929815050"
+				},
+				"playerC": {
+					"username": "Coolman041",
+					"discordID": "594631448510726151"
+				},
+				"playerD": {
+					"username": "Sam The Beaner",
+					"discordID": null
+				}
+			}
+		},
+		"Washington Angels": {
+			"GM": "ZennZar",
+			"AGM": "Toon",
+			"Ultimate": {
+				"Captain": "MakoWish.",
+				"playerA": {
+					"username": "MakoWish.",
+					"discordID": "385616234865098753"
+				},
+				"playerB": {
+					"username": "Jeegame14\t",
+					"discordID": null
+				},
+				"playerC": {
+					"username": "y0and0",
+					"discordID": "326093355358355456"
+				},
+				"playerD": {
+					"username": "Toon",
+					"discordID": null
+				}
+			},
+			"All-Star": {
+				"Captain": "Aylet",
+				"playerA": {
+					"username": "Aylet",
+					"discordID": "529429301943336975"
+				},
+				"playerB": {
+					"username": "muffin-gg",
+					"discordID": null
+				},
+				"playerC": {
+					"username": "Pollos",
+					"discordID": null
+				},
+				"playerD": {
+					"username": "Muffin Dealer",
+					"discordID": null
+				}
+			},
+			"Contender": {
+				"Captain": "Evolve",
+				"playerA": {
+					"username": "alpha_rxmpxge",
+					"discordID": null
+				},
+				"playerB": {
+					"username": "phyzixs",
+					"discordID": "551181741164068864"
+				},
+				"playerC": {
+					"username": "Evolve",
+					"discordID": null
+				},
+				"playerD": {
+					"discordID": null
+				}
+			}
+		}
+	}
 }

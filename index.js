@@ -143,7 +143,7 @@ client.on('message', (msg) =>{
             }
 
             if (command.toLowerCase() == "setteams") {
-                stats.setTeams(option);
+                stats.setTeams(args[0]);
             }
 
             if (command.toLowerCase() == "add") { // make sure that only admissions can do this

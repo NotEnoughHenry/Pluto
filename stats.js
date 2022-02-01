@@ -37,22 +37,11 @@ module.exports = {
     },
 
     async setTeams(option) { // ============================ NOT BUILT FOR 3's ============================
-        if (option == 3) return;
         var opt;
         var teamCount;
         if (option == 2) { // twos
-            opt = {
-                spreadsheetId: '1Hi_hJNBkzKdWDeKTIRH6CsczePQSNOa-i92IXTfdWhY',
-                ranges: `Teams!${collum[i][0]}3:${collum[i][1]}38`,
-                auth: googleClient
-            };
             teamCount = 20;
         } else { // option == 3 - threes
-            opt = {
-                spreadsheetId: '1H-gpEAodFBIn7LExpnicoNU1ioz5ThzqtjXmvm9F8Oo',
-                ranges: `Teams!${collum[i][0]}3:${collum[i][1]}38`,
-                auth: googleClient
-            };
             teamCount = 12;
         }
 
@@ -63,92 +52,172 @@ module.exports = {
         var teams = {};
         var collum = [['F','G'], ['H','I'], ['J','K'], ['L','M'], ['N','O'], ['P','Q'], ['R','S'], ['T','U'], ['V','W'], ['X','Y'], ['Z','AA'], ['AB','AC'], ['AD','AE'], ['AF','AG'], [`AH`,`AI`], [`AJ`,`AK`], [`AL`,`AM`],[`AN`,`AO`],[`AP`,`AQ`],[`AR`,`AS`]];
         for (var i = 0; i < teamCount; i++) {
-            
+            if (option == 2) { // twos
+                opt = {
+                    spreadsheetId: '1Hi_hJNBkzKdWDeKTIRH6CsczePQSNOa-i92IXTfdWhY',
+                    ranges: `Teams!${collum[i][0]}3:${collum[i][1]}38`,
+                    auth: googleClient
+                };
+                teamCount = 20;
+            } else { // option == 3 - threes
+                opt = {
+                    spreadsheetId: '1H-gpEAodFBIn7LExpnicoNU1ioz5ThzqtjXmvm9F8Oo',
+                    ranges: `Teams!${collum[i][0]}3:${collum[i][1]}33`,
+                    auth: googleClient
+                };
+                teamCount = 12;
+            }
             var data = await gsapi.spreadsheets.values.batchGet(opt);
             data = data.data.valueRanges[0].values;
             // Format data
-            teams = {...teams, // Adding teams
-                [data[0]]: {
-                    "GM": data[2][1],
-                    "AGM": data[3][1],
-                    "Legends": {
-                        "Captain": data[4][1],
-                        "playerA": {
-                            "username": data[6][0],
-                            "discordID": findID(data[6][0], option)
+            if (option == 2) {
+                teams = {...teams, // Adding teams
+                    [data[0]]: {
+                        "GM": data[2][1],
+                        "AGM": data[3][1],
+                        "Legends": {
+                            "Captain": data[4][1],
+                            "playerA": {
+                                "username": data[6][0],
+                                "discordID": await findID(data[6][0], option)
+                            },
+                            "playerB": {
+                                "username": data[7][0],
+                                "discordID": await findID(data[7][0], option)
+                            },
+                            "playerC": {
+                                "username": data[8][0],
+                                "discordID": await findID(data[8][0], option)
+                            },
+                            "playerD": {
+                                "username": data[9][0],
+                                "discordID": await findID(data[9][0], option)
+                            }
                         },
-                        "playerB": {
-                            "username": data[7][0],
-                            "discordID": findID(data[7][0], option)
+                        "Ultimate": {
+                            "Captain": data[13][1],
+                            "playerA": {
+                                "username": data[14][0],
+                                "discordID": await findID(data[14][0], option)
+                            },
+                            "playerB": {
+                                "username": data[15][0],
+                                "discordID": await findID(data[15][0], option)
+                            },
+                            "playerC": {
+                                "username": data[16][0],
+                                "discordID": await findID(data[16][0], option)
+                            },
+                            "playerD": {
+                                "username": data[17][0],
+                                "discordID": await findID(data[17][0], option)
+                            }
                         },
-                        "playerC": {
-                            "username": data[8][0],
-                            "discordID": findID(data[8][0], option)
+                        "All-Star": {
+                            "Captain": data[21][1],
+                            "playerA": {
+                                "username": data[22][0],
+                                "discordID": await findID(data[22][0], option)
+                            },
+                            "playerB": {
+                                "username": data[23][0],
+                                "discordID": await findID(data[23][0], option)
+                            },
+                            "playerC": {
+                                "username": data[24][0],
+                                "discordID": await findID(data[24][0], option)
+                            },
+                            "playerD": {
+                                "username": data[25][0],
+                                "discordID": await findID(data[25][0], option)
+                            }
                         },
-                        "playerD": {
-                            "username": data[9][0],
-                            "discordID": findID(data[9][0], option)
-                        }
-                    },
-                    "Ultimate": {
-                        "Captain": data[12][1],
-                        "playerA": {
-                            "username": data[14][0],
-                            "discordID": findID(data[14][0], option)
-                        },
-                        "playerB": {
-                            "username": data[15][0],
-                            "discordID": findID(data[15][0], option)
-                        },
-                        "playerC": {
-                            "username": data[16][0],
-                            "discordID": findID(data[16][0], option)
-                        },
-                        "playerD": {
-                            "username": data[17][0],
-                            "discordID": findID(data[17][0], option)
-                        }
-                    },
-                    "All-Star": {
-                        "Captain": data[20][1],
-                        "playerA": {
-                            "username": data[22][0],
-                            "discordID": findID(data[22][0], option)
-                        },
-                        "playerB": {
-                            "username": data[23][0],
-                            "discordID": findID(data[23][0], option)
-                        },
-                        "playerC": {
-                            "username": data[24][0],
-                            "discordID": findID(data[24][0], option)
-                        },
-                        "playerD": {
-                            "username": data[25][0],
-                            "discordID": findID(data[25][0], option)
-                        }
-                    },
-                    "Contender": {
-                        "Captain": data[28][1],
-                        "playerA": {
-                            "username": data[30][0],
-                            "discordID": findID(data[30][0], option)
-                        },
-                        "playerB": {
-                            "username": data[31][0],
-                            "discordID": findID(data[31][0], option)
-                        },
-                        "playerC": {
-                            "username": data[32][0],
-                            "discordID": findID(data[32][0], option)
-                        },
-                        "playerD": {
-                            "username": data[33][0],
-                            "discordID": findID(data[33][0], option)
+                        "Contender": {
+                            "Captain": data[29][1],
+                            "playerA": {
+                                "username": data[30][0],
+                                "discordID": await findID(data[30][0], option)
+                            },
+                            "playerB": {
+                                "username": data[31][0],
+                                "discordID": await findID(data[31][0], option)
+                            },
+                            "playerC": {
+                                "username": data[32][0],
+                                "discordID": await findID(data[32][0], option)
+                            },
+                            "playerD": {
+                                "username": data[33][0],
+                                "discordID": await findID(data[33][0], option)
+                            }
                         }
                     }
-                }
-            };
+                };
+            } else {
+                teams = {...teams, // Adding teams
+                    [data[0]]: {
+                        "GM": data[2][1],
+                        "AGM": data[3][1],
+                        "Ultimate": {
+                            "Captain": data[5][1],
+                            "playerA": {
+                                "username": data[6][0],
+                                "discordID": await findID(data[6][0], option)
+                            },
+                            "playerB": {
+                                "username": data[7][0],
+                                "discordID": await findID(data[7][0], option)
+                            },
+                            "playerC": {
+                                "username": data[8][0],
+                                "discordID": await findID(data[8][0], option)
+                            },
+                            "playerD": {
+                                "username": data[9][0],
+                                "discordID": await findID(data[9][0], option)
+                            }
+                        },
+                        "All-Star": {
+                            "Captain": data[14][1],
+                            "playerA": {
+                                "username": data[15][0],
+                                "discordID": await findID(data[15][0], option)
+                            },
+                            "playerB": {
+                                "username": data[16][0],
+                                "discordID": await findID(data[16][0], option)
+                            },
+                            "playerC": {
+                                "username": data[17][0],
+                                "discordID": await findID(data[17][0], option)
+                            },
+                            "playerD": {
+                                "username": data[18][0],
+                                "discordID": await findID(data[18][0], option)
+                            }
+                        },
+                        "Contender": {
+                            "Captain": data[23][1],
+                            "playerA": {
+                                "username": data[24][0],
+                                "discordID": await findID(data[24][0], option)
+                            },
+                            "playerB": {
+                                "username": data[25][0],
+                                "discordID": await findID(data[25][0], option)
+                            },
+                            "playerC": {
+                                "username": data[26][0],
+                                "discordID": await findID(data[26][0], option)
+                            },
+                            "playerD": {
+                                "username": data[27][0],
+                                "discordID": await findID(data[27][0], option)
+                            }
+                        }
+                    }
+                };
+            }
             // console.log(`${i+1}: ${data[0]} complete`); // Turn on if necessary
         }
 
@@ -176,12 +245,15 @@ module.exports = {
         playerData = JSON.parse(fs.readFileSync('playerData.json')); // MUST RUN THIS EVERYTIME I TAKE DATA FROM THE playerData.json
         var players;
         var teams;
+        var divisionCount;
         if (option == 2) {
             players = playerData.Twos;
             teams = teamsData.Twos;
+            divisionCount = 4;
         } else { 
             players = playerData.Threes;
             teams = teamsData.Threes;
+            divisionCount = 3;
         }
         var temp = "";
         for (var i = 0; i < team.length; i++) {
@@ -210,7 +282,7 @@ module.exports = {
         } 
 
         var teamImage;
-        switch (teamName) { // ADD THREE's IMAGES
+        switch (teamName) {
             case "California Bears":
                 teamImage = "https://cdn.discordapp.com/attachments/927578169043714168/933143125772341320/CABearsTransparent.png";
                 break;
@@ -310,8 +382,9 @@ module.exports = {
         }
         
         var longestString = 12;
-        for (var i = 2; i < 6; i++) { // 4 Leagues
+        for (var i = 2; i < divisionCount + 2; i++) { // 4 Leagues
             var league = team[Object.keys(team)[i]];
+            console.log(league);
             for (var j = 0; j < Object.keys(league).length; j++) {
                 try {
                     if (league[Object.keys(league)[j]].username.length > longestString) {
@@ -322,7 +395,7 @@ module.exports = {
         }
         // Setting String lengths
         var playerList = [];
-        for (var i = 2; i < 6; i++) { // 4 Leagues
+        for (var i = 2; i < divisionCount + 2; i++) { // 4 Leagues
             var league = team[Object.keys(team)[i]];
             var group = [];
             var totalSalary = 0;
@@ -351,26 +424,42 @@ module.exports = {
             group.push([tempString, totalSalary]);
             playerList.push(group);
         }
+
         var legends = [];
         var ultimate = [];
         var allstar = [];
         var contender = [];
         for (var i = 0; i < playerList.length; i++) {
             for (var j = 0; j < playerList[i].length; j++) {
-                if (i == 0) 
-                    legends.push("``" + playerList[i][j][0] + " | " + playerList[i][j][1]);
-                else if (i == 1)
-                    ultimate.push("``" + playerList[i][j][0] + " | " + playerList[i][j][1]);
-                else if (i == 2)
-                    allstar.push("``" + playerList[i][j][0] + " | " + playerList[i][j][1]);
-                else if (i == 3)
-                    contender.push("``" + playerList[i][j][0] + " | " + playerList[i][j][1]);
+                if (option == 2) {
+                    if (i == 0) 
+                        legends.push("``" + playerList[i][j][0] + " | " + playerList[i][j][1]);
+                    else if (i == 1)
+                        ultimate.push("``" + playerList[i][j][0] + " | " + playerList[i][j][1]);
+                    else if (i == 2)
+                        allstar.push("``" + playerList[i][j][0] + " | " + playerList[i][j][1]);
+                    else if (i == 3)
+                        contender.push("``" + playerList[i][j][0] + " | " + playerList[i][j][1]);
+                } else {
+                    if (i == 0) 
+                        ultimate.push("``" + playerList[i][j][0] + " | " + playerList[i][j][1]);
+                    else if (i == 1)
+                        allstar.push("``" + playerList[i][j][0] + " | " + playerList[i][j][1]);
+                    else if (i == 2)
+                        contender.push("``" + playerList[i][j][0] + " | " + playerList[i][j][1]);
+                }
             }
         }
-
+        
         longestString = 0;
         var staff = ["``GM: " + team.GM, "``AGM: " + team.AGM];
-        var list = [legends, ultimate, allstar, contender, staff];
+        var list;
+        if (option == 2) {
+            list = [legends, ultimate, allstar, contender, staff];
+        } else {
+            list = [ultimate, allstar, contender, staff];
+        }
+        
         for (var i = 0; i < list.length; i++) {
             for (var j = 0; j < list[i].length; j++) {
                 if (list[i][j].length > longestString) {
@@ -378,8 +467,12 @@ module.exports = {
                 }
             }
         }
-
-        var textboxes = ["", "", "", "", ""];
+        var textboxes;
+        if (option == 2) {
+            textboxes = ["", "", "", "", ""];
+        } else {
+            textboxes = ["", "", "", ""];
+        }
         for (var i = 0; i < list.length; i++) {
             for (var j = 0; j < list[i].length; j++) {
                 while (list[i][j].length < longestString + 1) {
@@ -388,18 +481,31 @@ module.exports = {
                 textboxes[i] += list[i][j] + "``\n";
             }
         }
-        const teamRoster = new Discord.MessageEmbed()
+
+        var teamRoster = new Discord.MessageEmbed()
                 .setTitle(teamName + " Roster")
                 .setThumbnail(teamImage)
-                .addFields(
+                .setFooter(randomFooter())
+                .setTimestamp();
+        if (option == 2) {
+            teamRoster.addFields(
                     { name: "``Staff:``", value: textboxes[4], inline: false},
                     { name: "``Legends:``", value: textboxes[0], inline: false},
                     { name: "``Ultimate:``", value: textboxes[1], inline: false},
                     { name: "``All-Star:``", value: textboxes[2], inline: false},
-                    { name: "``Contender:``", value: textboxes[3], inline: false},
-                )
-                .setFooter(randomFooter())
-                .setTimestamp();
+                    { name: "``Contender:``", value: textboxes[3], inline: false}
+            );
+            teamRoster.addFields(
+                
+    );
+        } else {
+            teamRoster.addFields(
+                { name: "``Staff:``", value: textboxes[3], inline: false},
+                { name: "``Ultimate:``", value: textboxes[0], inline: false},
+                { name: "``All-Star:``", value: textboxes[1], inline: false},
+                { name: "``Contender:``", value: textboxes[2], inline: false}
+            );
+        }
         msg.channel.send(teamRoster)
     },
 
@@ -542,7 +648,7 @@ function findUser(id, data) { // If you can make this a => then do it pussy
     return null;
 }
 
-function findID(username, option) {
+async function findID(username, option) {
     var discordID = null;
     playerData = JSON.parse(fs.readFileSync('playerData.json')); // MUST RUN THIS EVERYTIME I TAKE DATA FROM THE playerData.json
     var data;
@@ -554,7 +660,6 @@ function findID(username, option) {
 
     for (var i = 0; i < Object.keys(data).length; i++) {
         if (username == data[Object.keys(data)[i]].username) {
-            console.log(username + " | " + data[Object.keys(data)[i]].username);
             return Object.keys(data)[i];
         }
     }
