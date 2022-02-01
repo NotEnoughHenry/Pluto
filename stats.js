@@ -354,6 +354,8 @@ module.exports = {
     },
 
     async playerStats(msg, args, guilds) {
+        playerData = JSON.parse(fs.readFileSync('playerData.json')); // MUST RUN THIS EVERYTIME I TAKE DATA FROM THE playerData.json
+
         var data;
         var guild = {
             id: msg.guild.id,
@@ -388,8 +390,7 @@ module.exports = {
             guild.guild = guilds[2];
             guild.league = "Twos";
         }
-
-        var player = findUser(id, data);
+        var player = data[id];
 
         if (player == null) {
             msg.channel.send(`\`ERROR: Player not found\``);
@@ -426,7 +427,7 @@ module.exports = {
             textBoxes[i] += "`";
             textboxA += textBoxes[i];
         }
-        var textboxB = "";
+        var textboxB = "TEXT";
         if (player.games != 0) { // MAKE THIS DUMBASS
 
         }
@@ -441,7 +442,7 @@ module.exports = {
             .setTitle(`${player.username}'s Stats`)
             .setThumbnail(`https://cdn.discordapp.com/avatars/${id}/${discordAvatar}.png`)
             .addFields(
-                { name: `URL `, value: `${textboxA}`, inline: true},
+                { name: `URL`, value: `${textboxA}`, inline: true},
                 { name: `${guild.league}`, value: `${textboxB}`, inline: true},
             )
             .setFooter(randomFooter())

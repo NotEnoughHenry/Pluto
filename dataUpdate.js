@@ -252,16 +252,20 @@ module.exports = {
             };
         }
 
-        var playerList = gsapi.spreadsheets.values.batchGet(opt);
+        var playerList = await gsapi.spreadsheets.values.batchGet(opt);
         playerList = playerList.data.valueRanges[0].values;
         for (var i = 0; i < playerList.length; i++) {
-            if (playerList[i][0].length != 0) {
-                // binary search for them in the player list
-
-            }
+            try {
+                if (playerList[i][0].length > 0) {
+                    leagueData[playerList[i][0]].goals = playerList[i][2];
+                    leagueData[playerList[i][0]].assists = playerList[i][3];
+                    leagueData[playerList[i][0]].saves = playerList[i][4];
+                    leagueData[playerList[i][0]].shots = playerList[i][5];
+                    leagueData[playerList[i][0]].games = playerList[i][6];
+                    console.log(leagueData[playerList[i][0]]);
+                }
+            } catch {}
         }
-
-
 
         var userData = {
             Twos: null,

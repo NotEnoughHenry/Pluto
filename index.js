@@ -113,7 +113,7 @@ client.on('message', (msg) =>{
 
         if (msg.author.id == '238853321522282496') { // Make another section for staff
             if (command.toLowerCase() == "test") {
-                dataUpdate.sortData(2);
+                // TEST();
             }
 
             if (command.toLowerCase() == "mass") {
@@ -136,9 +136,9 @@ client.on('message', (msg) =>{
         if (command.toLowerCase() == "help") { // Repurpose -- UPDATE!!!
             const commandList = new Discord.MessageEmbed()
                 .setTitle("Command List")
-                .setThumbnail("https://pbs.twimg.com/profile_images/1189742100113502209/5U791_Mc_400x400.jpg")
+                .setThumbnail("https://media.discordapp.net/attachments/835197260211552277/937860535960096839/plutoPFP.png?width=676&height=676")
                 .addFields(
-                    { name: 'p.stats + [MLE Username]', value: "`Shows all the players stats!`\n`\"EX: p.stats\" OR \"p.stats @NotHenry#4271\"`", inline: false},
+                    { name: 'p.stats', value: "`Shows all the players stats!`\n`\"EX: p.stats\" OR \"p.stats @NotHenry#4271\"`", inline: false},
                     { name: 'p.top + [DIVISION]', value: "`Shows who's on the top of all stats!`\n`EX: p.top Contender`", inline: false},
                     { name: 'p.team + [TEAM]', value: "`Provides teams listed roster & salary.`", inline: false}
                 )
