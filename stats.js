@@ -401,7 +401,7 @@ module.exports = {
         // Just add more to the json and add more here then to increase what the text box can have
         var shotperc = 0;
         if (player.shots != 0) {
-            shotperc = ((player.goals / player.shots) * 100).toFixed(2);
+            shotperc = ((player.goals / player.shots) * 100).toFixed(1);
         }
         var textBoxes = [
             `\n\`Division: ${player.division}`,
@@ -427,9 +427,35 @@ module.exports = {
             textBoxes[i] += "`";
             textboxA += textBoxes[i];
         }
-        var textboxB = "TEXT";
-        if (player.games != 0) { // MAKE THIS DUMBASS
 
+        var textBoxes = [
+            `\n\`Salary: ${player.salary}`,
+            `\n\`GPG: ${((player.goals / player.games)).toFixed(1)}`,
+            `\n\`SPG: ${((player.saves / player.games)).toFixed(1)}`,
+            `\n\`APG: ${((player.assists / player.games)).toFixed(1)}`,
+            `\n\`SHPG: ${((player.shots / player.games)).toFixed(1)}`,
+            `\n\`Games: ${player.games}`,
+        ];
+
+        var textboxB = null;
+
+        if (player.games != 0) {
+            textboxB = "";
+            var longestString = textBoxes[0].length;
+
+            for (var i = 0; i < textBoxes.length; i++) {
+                if (textBoxes[i].length > longestString) {
+                    longestString = textBoxes[i].length + 1;
+                }
+            }
+            
+            for (var i = 0; i < textBoxes.length; i++) {
+                while (textBoxes[i].length <= longestString) {
+                    textBoxes[i] += " ";
+                }
+                textBoxes[i] += "`";
+                textboxB += textBoxes[i];
+            }
         }
 
         try {
@@ -438,15 +464,17 @@ module.exports = {
             msg.channel.send("``ERROR: User not found.``");
         }
         discordAvatar = discordAvatar[Object.keys(discordAvatar)[8]].avatar;
-        const statsResponse = new Discord.MessageEmbed()
+        var statsResponse = new Discord.MessageEmbed()
             .setTitle(`${player.username}'s Stats`)
             .setThumbnail(`https://cdn.discordapp.com/avatars/${id}/${discordAvatar}.png`)
             .addFields(
-                { name: `URL`, value: `${textboxA}`, inline: true},
-                { name: `${guild.league}`, value: `${textboxB}`, inline: true},
+                { name: `URL`, value: `${textboxA}`, inline: true}
             )
             .setFooter(randomFooter())
             .setTimestamp();
+        if (textboxB != null) {
+            statsResponse.addFields({ name: `${guild.league}`, value: `${textboxB}`, inline: true});
+        }
         msg.channel.send(statsResponse);
     },
 
