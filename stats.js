@@ -38,18 +38,32 @@ module.exports = {
 
     async setTeams(option) { // ============================ NOT BUILT FOR 3's ============================
         if (option == 3) return;
+        var opt;
+        var teamCount;
+        if (option == 2) { // twos
+            opt = {
+                spreadsheetId: '1Hi_hJNBkzKdWDeKTIRH6CsczePQSNOa-i92IXTfdWhY',
+                ranges: `Teams!${collum[i][0]}3:${collum[i][1]}38`,
+                auth: googleClient
+            };
+            teamCount = 20;
+        } else { // option == 3 - threes
+            opt = {
+                spreadsheetId: '1H-gpEAodFBIn7LExpnicoNU1ioz5ThzqtjXmvm9F8Oo',
+                ranges: `Teams!${collum[i][0]}3:${collum[i][1]}38`,
+                auth: googleClient
+            };
+            teamCount = 12;
+        }
+
         teamsData = JSON.parse(fs.readFileSync('teamsData.json')); // MUST RUN THIS EVERYTIME I TAKE DATA FROM THE teamsData.json
         playerData = JSON.parse(fs.readFileSync('playerData.json')); // MUST RUN THIS EVERYTIME I TAKE DATA FROM THE playerData.json
 
         var data;
         var teams = {};
         var collum = [['F','G'], ['H','I'], ['J','K'], ['L','M'], ['N','O'], ['P','Q'], ['R','S'], ['T','U'], ['V','W'], ['X','Y'], ['Z','AA'], ['AB','AC'], ['AD','AE'], ['AF','AG'], [`AH`,`AI`], [`AJ`,`AK`], [`AL`,`AM`],[`AN`,`AO`],[`AP`,`AQ`],[`AR`,`AS`]];
-        for (var i = 0; i < 20; i++) {
-            var opt = {
-                spreadsheetId: '1Hi_hJNBkzKdWDeKTIRH6CsczePQSNOa-i92IXTfdWhY',
-                ranges: `Teams!${collum[i][0]}3:${collum[i][1]}38`,
-                auth: googleClient
-            };
+        for (var i = 0; i < teamCount; i++) {
+            
             var data = await gsapi.spreadsheets.values.batchGet(opt);
             data = data.data.valueRanges[0].values;
             // Format data
@@ -256,6 +270,42 @@ module.exports = {
                 break;
             case "Montreal Monarchs":
                 teamImage = "https://cdn.discordapp.com/attachments/927578169043714168/933105046529409044/MTLMonarchsTransparent.png";
+                break;
+            case "Alaska Yetis":
+                teamImage = "https://media.discordapp.net/attachments/925528910010134568/937904151684333608/Alaska_Yetis_Final_LOGO.png?width=670&height=670";
+                break;
+            case "Arizona Scorpions":
+                teamImage = "https://media.discordapp.net/attachments/925528910010134568/937904152196042762/Arizona_Scorpions_Final_LOGO.png?width=670&height=670";
+                break;
+            case "Carolina Pirates":
+                teamImage = "https://media.discordapp.net/attachments/925528910010134568/937904152682594344/Carolina_Pirates_Final_LOGO.png?width=670&height=670";
+                break;
+            case "Oregon Ninjas":
+                teamImage = "https://media.discordapp.net/attachments/925528910010134568/937904182042714112/Oregon_Ninjas_Final_LOGO.png?width=670&height=670";
+                break;
+            case "Hawaii Tikis":
+                teamImage = "https://media.discordapp.net/attachments/925528910010134568/937904153588531280/image0.png?width=670&height=670";
+                break;
+            case "Iceland Foxes":
+                teamImage = "https://media.discordapp.net/attachments/925528910010134568/937904153215246356/Iceland_Foxes.png?width=670&height=670";
+                break;
+            case "Los Angeles Astros":
+                teamImage = "https://media.discordapp.net/attachments/925528910010134568/937904154133794886/LA_Astros_Final_LOGO.png?width=670&height=670";
+                break;
+            case "Michigan Blizzard":
+                teamImage = "https://media.discordapp.net/attachments/925528910010134568/937904154796515348/Michigan_Blizzard_Final_LOGO.png?width=670&height=670";
+                break;
+            case "New York Liberty":
+                teamImage = "https://media.discordapp.net/attachments/925528910010134568/937904151269093486/New_York_Liberty_Final_LOGO.png?width=670&height=670";
+                break;
+            case "Ohio Gorillas":
+                teamImage = "https://media.discordapp.net/attachments/925528910010134568/937904181673623572/OHGorillas.png?width=693&height=671";
+                break;
+            case "San Francisco Gold Miners":
+                teamImage = "https://media.discordapp.net/attachments/925528910010134568/937904183099682866/SF_Gold_Miners_Final_LOGO.png?width=670&height=670";
+                break;
+            case "Washington Angels":
+                teamImage = "https://media.discordapp.net/attachments/925528910010134568/937904181023502436/Washington_Angels_Final_LOGO.png?width=670&height=670";
                 break;
         }
         

@@ -74,6 +74,12 @@ client.on('ready', () => {
             } catch {
                 console.log("SetTeams 2's FAILED");
             }
+            try {
+                stats.setTeams(3);
+                await sleep(300000);
+            } catch {
+                console.log("SetTeams 3's FAILED");
+            }
             // try {
             //     dataUpdate.updatePlayerData(2);
             //     await sleep(60000);
