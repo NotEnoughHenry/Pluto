@@ -44,7 +44,7 @@ client.on('ready', () => {
                 dataUpdate.massAdd(2);
                 await sleep(60000);
                 dataUpdate.sortData(2);
-                await sleep(10000);
+                await sleep(30000);
             } catch { 
                 console.log("massAdd 2's FAILED");
             }
@@ -58,7 +58,7 @@ client.on('ready', () => {
                 dataUpdate.massAdd(3);
                 await sleep(60000);
                 dataUpdate.sortData(3);
-                await sleep(10000);
+                await sleep(30000);
             } catch { 
                 console.log("massAdd 3's FAILED");
             }

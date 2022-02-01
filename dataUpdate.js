@@ -239,7 +239,7 @@ module.exports = {
         if (option == 2) { // twos
             leagueData = playerData.Twos;
             opt = {
-                spreadsheetId: '1Hi_hJNBkzKdWDeKTIRH6CsczePQSNOa-i92IXTfdWhY',
+                spreadsheetId: '1Hi_hJNBkzKdWDeKTIRH6CsczePQSNOa-i92IXTfdWhY', // ADD 2's SHEET
                 ranges: `DIRECTORY!A2:J`,
                 auth: googleClient
             };
@@ -303,9 +303,9 @@ module.exports = {
         }
         var smallest = unsortedArray[0];
         for (var i = 0; i < Object.keys(leagueData).length; i++) {
-            if (i % 10 == 0) {
-                console.log(i);
-            }
+            // if (i % 10 == 0) { // add if necessary
+            //     console.log(i);
+            // }
             smallest = unsortedArray[0];
             smallestIndex = 0;
             for (var j = 0; j < unsortedArray.length; j++) {

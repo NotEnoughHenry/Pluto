@@ -467,6 +467,7 @@ module.exports = {
                 }
             }
         }
+        
         var textboxes;
         if (option == 2) {
             textboxes = ["", "", "", "", ""];
