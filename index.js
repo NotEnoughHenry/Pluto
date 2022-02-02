@@ -49,24 +49,12 @@ client.on('ready', () => {
                 console.log("massAdd 2's FAILED");
             }
             try {
-                dataUpdate.updateMMRs(2);
-                await sleep(300000);
-            } catch { 
-                console.log("updateMMRs 2's FAILED");
-            }
-            try {
                 dataUpdate.massAdd(3);
                 await sleep(60000);
                 dataUpdate.sortData(3);
                 await sleep(30000);
             } catch { 
                 console.log("massAdd 3's FAILED");
-            }
-            try {
-                dataUpdate.updateMMRs(3);
-                await sleep(300000);
-            } catch { 
-                console.log("updateMMRs 3's FAILED");
             }
             try {
                 stats.setTeams(2);
@@ -139,7 +127,9 @@ client.on('message', (msg) =>{
             }
 
             if (command.toLowerCase() == "mmr") {
-                dataUpdate.updateMMRs(args[0]);
+                if (args[0] == 2 || args[0] == 3) {
+                    dataUpdate.updateMMRs(args[0]);
+                }
             }
 
             if (command.toLowerCase() == "setteams") {
