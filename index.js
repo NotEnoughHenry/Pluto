@@ -22,15 +22,10 @@ var nbp = null;
 client.login(token);
 
 client.on('ready', () => {
-    console.log('Bot is online');
+    console.log('Pluto is online');
     var today = new Date();
-    // client.user.setPresence({
-    //     status: "online",  // Options: online, idle... Do not disturb is dnd
-    //     game: {
-    //         name: "m.help",
-    //         type: "PLAYING"
-    //     }
-    // });
+    client.user.setStatus('online');
+    client.user.setActivity("Try p.help");
 
     urlTwosDiscord = client.guilds.cache.get('771817727819776061');
     urlThreesDiscord = client.guilds.cache.get('835194686859509811');
@@ -119,7 +114,7 @@ client.on('message', (msg) =>{
 
         if (msg.author.id == '238853321522282496') { // Make another section for staff
             if (command.toLowerCase() == "test") {
-                // TEST();
+                test();
             }
 
             if (command.toLowerCase() == "mass") {
@@ -144,10 +139,11 @@ client.on('message', (msg) =>{
         if (command.toLowerCase() == "help") { // Repurpose -- UPDATE!!!
             const commandList = new Discord.MessageEmbed()
                 .setTitle("Command List")
-                .setThumbnail("https://media.discordapp.net/attachments/835197260211552277/937860535960096839/plutoPFP.png?width=676&height=676")
+                .setThumbnail("https://cdn.discordapp.com/attachments/748954025570992205/939192382723870830/plutoPFP.png")
                 .addFields(
                     { name: 'p.stats', value: "`Shows all the players stats!`\n`\"EX: p.stats\" OR \"p.stats @NotHenry#4271\"`", inline: false},
                     { name: 'p.top + [DIVISION]', value: "`Shows who's on the top of all stats!`\n`EX: p.top Contender`", inline: false},
+                    { name: 'p.top + [TEAM]', value: "`Shows teams who are on the top of all stats!`\n`EX: p.top Owl`", inline: false},
                     { name: 'p.team + [TEAM]', value: "`Provides teams listed roster & salary.`", inline: false}
                 )
                 .setFooter(randomFooter())
@@ -184,4 +180,47 @@ function sleep(ms) {
     return new Promise((resolve) => {
         setTimeout(resolve, ms);
     });
+}
+
+async function test() {
+    try {
+        dataUpdate.massAdd(2);
+        await sleep(60000);
+        dataUpdate.sortData(2);
+        await sleep(30000);
+    } catch { 
+        console.log("massAdd 2's FAILED");
+    }
+    try {
+        dataUpdate.massAdd(3);
+        await sleep(60000);
+        dataUpdate.sortData(3);
+        await sleep(30000);
+    } catch { 
+        console.log("massAdd 3's FAILED");
+    }
+    try {
+        stats.setTeams(2);
+        await sleep(300000);
+    } catch {
+        console.log("SetTeams 2's FAILED");
+    }
+    try {
+        stats.setTeams(3);
+        await sleep(300000);
+    } catch {
+        console.log("SetTeams 3's FAILED");
+    }
+    // try {
+    //     dataUpdate.updatePlayerData(2);
+    //     await sleep(60000);
+    // } catch { 
+    //     console.log("updatePlayerData 2's FAILED");
+    // }
+    try {
+        dataUpdate.updatePlayerData(3);
+        await sleep(60000);
+    } catch { 
+        console.log("updatePlayerData 3's FAILED");
+    }
 }
