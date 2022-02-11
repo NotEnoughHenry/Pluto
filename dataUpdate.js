@@ -40,6 +40,15 @@ const gsapi = google.sheets({version: 'v4', auth: googleClient});
 
 
 module.exports = {
+    test(){
+        playerData = JSON.parse(fs.readFileSync('playerData.json')); // MUST RUN THIS EVERYTIME I TAKE DATA FROM THE playerData.json
+
+        var leagueData;
+        leagueData = playerData.Twos;
+
+        console.log(`${leagueData["113370559630340096"] == null}\n${leagueData["113370559630340097"] == null}`);
+    },
+
     async massAdd(option) {
         playerData = JSON.parse(fs.readFileSync('playerData.json')); // MUST RUN THIS EVERYTIME I TAKE DATA FROM THE playerData.json
 
@@ -78,13 +87,7 @@ module.exports = {
             // if (count % 5 == 0 && count != 0) { // Add if necessary
             //     console.log(`${count} added so far.`);
             // }
-            for (var j = 0; j < Object.keys(leagueData).length; j++) {
-                if (playerList[i][1] == Object.keys(leagueData)[j]) {
-                    canAdd = false;
-                    break;
-                }
-            }
-            if (canAdd) {
+            if (leagueData[playerList[i][1] == null]) {
                 // console.log("ADDING " + playerList[i][1]); // Use if necessary
                 count++;
                 try {
@@ -276,60 +279,6 @@ module.exports = {
             userData.Threes = playerData.Threes;
         } else { // option == 3 - threes
             userData.Threes = leagueData;
-            userData.Twos = playerData.Twos;
-        }
-
-        fs.writeFile('./playerData.json', JSON.stringify(userData, null, '\t'), err => {
-            if(err) throw err;
-        });
-    },
-
-    sortData(option) {
-        playerData = JSON.parse(fs.readFileSync('playerData.json')); // MUST RUN THIS EVERYTIME I TAKE DATA FROM THE playerData.json
-
-        var leagueData;
-        if (option == 2) { // twos
-            leagueData = playerData.Twos;
-        } else { // option == 3 - threes
-            leagueData = playerData.Threes;
-        }
-
-        var sortedJson = {};
-        var smallestIndex = 0;
-        var unsortedArray = [];
-        for (var i = 0; i < Object.keys(leagueData).length; i++) {
-            unsortedArray.push(Object.keys(leagueData)[i]);
-        }
-        var smallest = unsortedArray[0];
-        for (var i = 0; i < Object.keys(leagueData).length; i++) {
-            // if (i % 10 == 0) { // add if necessary
-            //     console.log(i);
-            // }
-            smallest = unsortedArray[0];
-            smallestIndex = 0;
-            for (var j = 0; j < unsortedArray.length; j++) {
-                if (smallest > unsortedArray[j]) {
-                    smallest = unsortedArray[j];
-                    smallestIndex = j;
-                }
-            }
-            unsortedArray.splice(smallestIndex, 1);
-            
-            sortedJson = {...sortedJson, [smallest]: leagueData[smallest]};
-        }
-        console.log(Object.keys(sortedJson).length);
-        console.log(Object.keys(leagueData).length);
-
-        var userData = {
-            Twos: null,
-            Threes: null
-        };
-        
-        if (option == 2) { // twos
-            userData.Twos = sortedJson;
-            userData.Threes = playerData.Threes;
-        } else { // option == 3 - threes
-            userData.Threes = sortedJson;
             userData.Twos = playerData.Twos;
         }
 

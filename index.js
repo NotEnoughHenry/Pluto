@@ -114,7 +114,7 @@ client.on('message', (msg) =>{
 
         if (msg.author.id == '238853321522282496') { // Make another section for staff
             if (command.toLowerCase() == "test") {
-                test();
+                dataUpdate.test();
             }
 
             if (command.toLowerCase() == "mass") {
@@ -186,16 +186,12 @@ async function test() {
     try {
         dataUpdate.massAdd(2);
         await sleep(60000);
-        dataUpdate.sortData(2);
-        await sleep(30000);
     } catch { 
         console.log("massAdd 2's FAILED");
     }
     try {
         dataUpdate.massAdd(3);
         await sleep(60000);
-        dataUpdate.sortData(3);
-        await sleep(30000);
     } catch { 
         console.log("massAdd 3's FAILED");
     }
