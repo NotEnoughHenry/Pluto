@@ -40,15 +40,6 @@ const gsapi = google.sheets({version: 'v4', auth: googleClient});
 
 
 module.exports = {
-    test(){
-        playerData = JSON.parse(fs.readFileSync('playerData.json')); // MUST RUN THIS EVERYTIME I TAKE DATA FROM THE playerData.json
-
-        var leagueData;
-        leagueData = playerData.Twos;
-
-        console.log(`${leagueData["113370559630340096"] == null}\n${leagueData["113370559630340097"] == null}`);
-    },
-
     async massAdd(option) {
         playerData = JSON.parse(fs.readFileSync('playerData.json')); // MUST RUN THIS EVERYTIME I TAKE DATA FROM THE playerData.json
 
